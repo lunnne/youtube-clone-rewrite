@@ -28,6 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@tanstack/react-query", "virtual:f563e59f0be44c4507f1f04bfcf39b2bf7be83fbfa3097558afebf07ac6b69b74a568d2c16100cafb3850a12e4a51ff75eeddac2db5ce54c098bc6bea2833798#npm:4.22.0"],\
             ["@testing-library/jest-dom", "npm:5.16.5"],\
             ["@testing-library/react", "virtual:f563e59f0be44c4507f1f04bfcf39b2bf7be83fbfa3097558afebf07ac6b69b74a568d2c16100cafb3850a12e4a51ff75eeddac2db5ce54c098bc6bea2833798#npm:13.4.0"],\
             ["@testing-library/user-event", "virtual:f563e59f0be44c4507f1f04bfcf39b2bf7be83fbfa3097558afebf07ac6b69b74a568d2c16100cafb3850a12e4a51ff75eeddac2db5ce54c098bc6bea2833798#npm:13.5.0"],\
@@ -38,6 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-router-dom", "virtual:f563e59f0be44c4507f1f04bfcf39b2bf7be83fbfa3097558afebf07ac6b69b74a568d2c16100cafb3850a12e4a51ff75eeddac2db5ce54c098bc6bea2833798#npm:6.6.2"],\
             ["react-scripts", "virtual:f563e59f0be44c4507f1f04bfcf39b2bf7be83fbfa3097558afebf07ac6b69b74a568d2c16100cafb3850a12e4a51ff75eeddac2db5ce54c098bc6bea2833798#npm:5.0.1"],\
             ["tailwindcss", "virtual:f563e59f0be44c4507f1f04bfcf39b2bf7be83fbfa3097558afebf07ac6b69b74a568d2c16100cafb3850a12e4a51ff75eeddac2db5ce54c098bc6bea2833798#npm:3.2.4"],\
+            ["uuid", "npm:9.0.0"],\
             ["web-vitals", "npm:2.1.4"]\
           ],\
           "linkType": "SOFT"\
@@ -4095,6 +4097,47 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@svgr/plugin-jsx", "npm:5.5.0"],\
             ["@svgr/plugin-svgo", "npm:5.5.0"],\
             ["loader-utils", "npm:2.0.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@tanstack/query-core", [\
+        ["npm:4.22.0", {\
+          "packageLocation": "./.yarn/cache/@tanstack-query-core-npm-4.22.0-69d2c1488a-d24c13f8e2.zip/node_modules/@tanstack/query-core/",\
+          "packageDependencies": [\
+            ["@tanstack/query-core", "npm:4.22.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@tanstack/react-query", [\
+        ["npm:4.22.0", {\
+          "packageLocation": "./.yarn/cache/@tanstack-react-query-npm-4.22.0-e0112a8a61-b146774b44.zip/node_modules/@tanstack/react-query/",\
+          "packageDependencies": [\
+            ["@tanstack/react-query", "npm:4.22.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:f563e59f0be44c4507f1f04bfcf39b2bf7be83fbfa3097558afebf07ac6b69b74a568d2c16100cafb3850a12e4a51ff75eeddac2db5ce54c098bc6bea2833798#npm:4.22.0", {\
+          "packageLocation": "./.yarn/__virtual__/@tanstack-react-query-virtual-5619b8174f/0/cache/@tanstack-react-query-npm-4.22.0-e0112a8a61-b146774b44.zip/node_modules/@tanstack/react-query/",\
+          "packageDependencies": [\
+            ["@tanstack/react-query", "virtual:f563e59f0be44c4507f1f04bfcf39b2bf7be83fbfa3097558afebf07ac6b69b74a568d2c16100cafb3850a12e4a51ff75eeddac2db5ce54c098bc6bea2833798#npm:4.22.0"],\
+            ["@tanstack/query-core", "npm:4.22.0"],\
+            ["@types/react", null],\
+            ["@types/react-dom", null],\
+            ["@types/react-native", null],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:f563e59f0be44c4507f1f04bfcf39b2bf7be83fbfa3097558afebf07ac6b69b74a568d2c16100cafb3850a12e4a51ff75eeddac2db5ce54c098bc6bea2833798#npm:18.2.0"],\
+            ["react-native", null],\
+            ["use-sync-external-store", "virtual:5619b8174fdbe3aab762258c21c9cc7871ed263d387b5bf4d5712c10f98e421cf239e5bfda4ce67720280cad435754f07a45b7f9c3fc77dfe5b618fe88a04816#npm:1.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react-native",\
+            "@types/react",\
+            "react-dom",\
+            "react-native",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -16630,6 +16673,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["use-sync-external-store", [\
+        ["npm:1.2.0", {\
+          "packageLocation": "./.yarn/cache/use-sync-external-store-npm-1.2.0-44f75d2564-5c639e0f8d.zip/node_modules/use-sync-external-store/",\
+          "packageDependencies": [\
+            ["use-sync-external-store", "npm:1.2.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:5619b8174fdbe3aab762258c21c9cc7871ed263d387b5bf4d5712c10f98e421cf239e5bfda4ce67720280cad435754f07a45b7f9c3fc77dfe5b618fe88a04816#npm:1.2.0", {\
+          "packageLocation": "./.yarn/__virtual__/use-sync-external-store-virtual-3ab1ecbd33/0/cache/use-sync-external-store-npm-1.2.0-44f75d2564-5c639e0f8d.zip/node_modules/use-sync-external-store/",\
+          "packageDependencies": [\
+            ["use-sync-external-store", "virtual:5619b8174fdbe3aab762258c21c9cc7871ed263d387b5bf4d5712c10f98e421cf239e5bfda4ce67720280cad435754f07a45b7f9c3fc77dfe5b618fe88a04816#npm:1.2.0"],\
+            ["@types/react", null],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["util-deprecate", [\
         ["npm:1.0.2", {\
           "packageLocation": "./.yarn/cache/util-deprecate-npm-1.0.2-e3fe1a219c-474acf1146.zip/node_modules/util-deprecate/",\
@@ -16675,6 +16740,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/uuid-npm-8.3.2-eca0baba53-5575a8a75c.zip/node_modules/uuid/",\
           "packageDependencies": [\
             ["uuid", "npm:8.3.2"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:9.0.0", {\
+          "packageLocation": "./.yarn/cache/uuid-npm-9.0.0-46c41e3e43-8dd2c83c43.zip/node_modules/uuid/",\
+          "packageDependencies": [\
+            ["uuid", "npm:9.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -17531,6 +17603,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["youtube-clone-rewrite", "workspace:."],\
+            ["@tanstack/react-query", "virtual:f563e59f0be44c4507f1f04bfcf39b2bf7be83fbfa3097558afebf07ac6b69b74a568d2c16100cafb3850a12e4a51ff75eeddac2db5ce54c098bc6bea2833798#npm:4.22.0"],\
             ["@testing-library/jest-dom", "npm:5.16.5"],\
             ["@testing-library/react", "virtual:f563e59f0be44c4507f1f04bfcf39b2bf7be83fbfa3097558afebf07ac6b69b74a568d2c16100cafb3850a12e4a51ff75eeddac2db5ce54c098bc6bea2833798#npm:13.4.0"],\
             ["@testing-library/user-event", "virtual:f563e59f0be44c4507f1f04bfcf39b2bf7be83fbfa3097558afebf07ac6b69b74a568d2c16100cafb3850a12e4a51ff75eeddac2db5ce54c098bc6bea2833798#npm:13.5.0"],\
@@ -17541,6 +17614,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-router-dom", "virtual:f563e59f0be44c4507f1f04bfcf39b2bf7be83fbfa3097558afebf07ac6b69b74a568d2c16100cafb3850a12e4a51ff75eeddac2db5ce54c098bc6bea2833798#npm:6.6.2"],\
             ["react-scripts", "virtual:f563e59f0be44c4507f1f04bfcf39b2bf7be83fbfa3097558afebf07ac6b69b74a568d2c16100cafb3850a12e4a51ff75eeddac2db5ce54c098bc6bea2833798#npm:5.0.1"],\
             ["tailwindcss", "virtual:f563e59f0be44c4507f1f04bfcf39b2bf7be83fbfa3097558afebf07ac6b69b74a568d2c16100cafb3850a12e4a51ff75eeddac2db5ce54c098bc6bea2833798#npm:3.2.4"],\
+            ["uuid", "npm:9.0.0"],\
             ["web-vitals", "npm:2.1.4"]\
           ],\
           "linkType": "SOFT"\
