@@ -2,14 +2,12 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import VideoCard from '../components/VideoCard';
+import { useYoutubeApi } from '../context/YoutubeApiContext';
 
 export default function Videos() {
   const { keyword } = useParams();
-  const {
-    isLoading,
-    error,
-    data: videoList,
-  } = useQuery(['videoList', keyword], async () => fetch(`/data/${keyword ? 'search' : 'most-popular'}.json`).then((res) => res.json().then((data) => data.items)));
+  const { youtube } = useYoutubeApi();
+  const { isLoading, error, data: videoList } = useQuery(['videoList', keyword], () => youtube.search(keyword));
 
   if (isLoading) return 'Loading...';
   if (error) return 'An error has occurred: ' + error.message;
