@@ -10,4 +10,12 @@ export default class FakeYoutubeClient {
     return axios.get('/data/most-popular.json')
   }
 
+  async channels() {
+    return axios.get('/data/detail.json')
+  }
+
+  async related() {
+    return axios.get('/data/related.json')
+  }
+
 }

@@ -1,18 +1,23 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { formatAgo } from '../util/date';
 
-export default function VideoCard({ videos }) {
-  const { id, snippet } = videos;
-
-  console.log(snippet);
+export default function VideoCard({ video }) {
+  const { title, thumbnails, channelTitle, publishedAt } = video.snippet;
+  const navigate = useNavigate();
 
   return (
-    <div>
-      <img src={snippet.thumbnails.default.url} alt="thumbnail" />
+    <li
+      onClick={() => {
+        navigate(`/videos/watch/${video.id}`, { state: { video } });
+      }}
+    >
+      <img className="w-full" src={thumbnails.medium.url} alt={title} />
       <div>
-        <p>{snippet.title}</p>
-        <p>{snippet.channelTitle}</p>
-        <p>{snippet.publishedAt}</p>
+        <p className="font-semibold my-2 line-clamp-2">{title}</p>
+        <p className="text-sm opacity-80">{channelTitle}</p>
+        <p className="text-sm opacity-80">{formatAgo(publishedAt)}</p>
       </div>
-    </div>
+    </li>
   );
 }

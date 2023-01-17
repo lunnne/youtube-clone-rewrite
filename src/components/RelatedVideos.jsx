@@ -1,20 +1,20 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import VideoCard from '../components/VideoCard';
 import { useYoutubeApi } from '../context/YoutubeApiContext';
+import VideoCard from './VideoCard';
 
-export default function Videos() {
-  const { keyword } = useParams();
+export default function RelatedVideos({ videoId }) {
   const { youtube } = useYoutubeApi();
-  const { isLoading, error, data: videoList } = useQuery(['videoList', keyword], () => youtube.search(keyword));
+  const { isLoading, error, data: videoList } = useQuery(['related', videoId], () => youtube.relatedVideos(videoId));
 
+  // if (isLoading) return <p>is Loding..</p>;
+  // if (error) return <p>error occured..</p>;
   return (
     <>
       {isLoading && <p>Loading...</p>}
       {error && <p>Something is Wrong 😢</p>}
       {videoList && (
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2 gap-y-4">
+        <ul>
           {videoList.map((item) => (
             <VideoCard key={item.id} video={item} />
           ))}
