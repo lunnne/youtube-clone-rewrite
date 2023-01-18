@@ -5,7 +5,7 @@ import VideoCard from './VideoCard';
 
 export default function RelatedVideos({ videoId }) {
   const { youtube } = useYoutubeApi();
-  const { isLoading, error, data: videoList } = useQuery(['related', videoId], () => youtube.relatedVideos(videoId));
+  const { isLoading, error, data: videoList } = useQuery(['related', videoId], () => youtube.relatedVideos(videoId), { staleTime: 1000 * 60 * 5 });
 
   // if (isLoading) return <p>is Loding..</p>;
   // if (error) return <p>error occured..</p>;
@@ -16,7 +16,7 @@ export default function RelatedVideos({ videoId }) {
       {videoList && (
         <ul>
           {videoList.map((item) => (
-            <VideoCard key={item.id} video={item} />
+            <VideoCard key={item.id} video={item} type='list' />
           ))}
         </ul>
       )}

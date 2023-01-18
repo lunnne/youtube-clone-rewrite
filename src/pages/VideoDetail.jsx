@@ -11,12 +11,15 @@ export default function VideoDetail() {
 
   return (
     <section className='flex flex-col lg:flex-row'>
-      <article>
-        <iframe id="player" type="text/html" width="100%" height="640" src={`http://www.youtube.com/embed/${video.id}`} frameBorder="0"></iframe>
-        <ChannelInfo channelId={channelId} channelTitle={channelTitle} />
-        <pre className="whitespace-pre-wrap">{description}</pre>
+      <article className='basis-4/6'>
+        <iframe id="player" type="text/html" title={title} width="100%" height="640" src={`http://www.youtube.com/embed/${video.id}`} frameBorder="0"></iframe>
+        <div className='p-8'>
+          <h2 className='text-xl font-bold'>{title}</h2>
+          <ChannelInfo channelId={channelId} channelTitle={channelTitle} />
+          <pre className="whitespace-pre-wrap">{description}</pre>
+        </div>
       </article>
-      <section>
+      <section className='basis-2/6'>
         <RelatedVideos videoId={video.id} />
       </section>
     </section>
